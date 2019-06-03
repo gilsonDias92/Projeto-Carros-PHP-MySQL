@@ -25,21 +25,69 @@ $car->SetFoto4(@$_POST['foto4']);
 $car->Incluir();
 ?>
 <div class="container mt-3">
-	<div class="card">
-		<h5 class="card-header bg-danger text-dark font-weight-bold"><?php echo $car->GetMarca().' '. $car->GetModelo() ?> </h5>
-		<div class="card-body bg-dark text-danger">
-			<p class="card-text">Descrição: 
-				<span class="text-light"><?php echo ucwords($descri = $car->GetDescricao())?></span> </p>
-				<p class="card-text">Nº Portas: 
-					<span class="text-light"><?php echo $car->GetPortas()?></span></p>
-					<p class="card-text">Ano: <?php echo $car->GetAnoFab().'/'.$car->GetAnoMod() ?></p>
-					<p class="card-text">Valor: R$<?php echo $car->GetValor()?></p>
-					<a href="./administrativo.php?menu=cadastrar">
-						<button class="btnConfig btn-success float-right p-2 mb-2s">Novo Veículo</button>
-					</a>
-					<a href="./administrativo.php?menu=listar"" >
-						<button class="btnConfig btn-secondary float-right p-2 mb-2s">Todos os carros</button>
-					</a>
-				</div>
-			</div>
+	<div class="container mt-3">
+		<table class="table">
+			<thead class="thead-dark">
+				<tr>
+					<th scope="col-4" colspan="2"><h3>DADOS DO VEÍCULO</h3></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row">Marca: </th>
+					<td><?php echo $car->GetMarca() ?></td>
+				</tr>
+				<tr>
+					<th scope="row">Modelo: </th>
+					<td><?php echo $car->GetModelo() ?></td
+					</tr>
+					<tr>
+						<th scope="row">Descrição: </th>
+						<td><?php echo $car->GetDescricao() ?></td>
+					</tr>
+					<tr>
+						<th scope="row">Ano de Fabricação: </th>
+						<td><?php echo $car->GetAnoFab() ?></td>
+					</tr>
+					<tr>
+						<th scope="row">Ano Modelo: </th>
+						<td><?php echo $car->GetAnoMod() ?></td>
+					</tr>
+					<tr>
+						<th scope="row">Número de portas: </th>
+						<td><?php echo $car->GetPortas() ?></td>
+					</tr>
+					<tr>
+						<th scope="row">Cor: </th>
+						<td><?php echo $car->GetCor() ?></td>
+					</tr>
+					<tr>
+						<th scope="row">Km: </th>
+						<td><?php echo $car->GetKm() ?></td>
+					</tr>
+					<tr>
+						<th scope="row">Placa: </th>
+						<td><?php echo $car->GetPlaca() ?></td>
+					</tr>
+					<tr>
+						<th scope="row">Valor: </th>
+						<td><?php echo 'R$ '.number_format($valor = $car->GetValor(), 2,",",".") ?></td>
+					</tr>
+					<tr>
+						<th scope="row">Observações: </th>
+						<td><?php echo $car->GetObs() ?></td>
+					</tr>
+					<tr>
+						<th scope="row">Ativo: </th>
+						<td>
+							<?php
+							$ativo = (isset($_POST['ativo'])) ? 'Sim' : 'Não';
+							echo $ativo; ?>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2"><img src='<?php echo $car->GetFoto1()?>'/> </td>
+					</tr>
+				</tbody>
+			</table>
 		</div>

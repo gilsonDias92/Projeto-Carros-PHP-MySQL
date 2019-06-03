@@ -16,6 +16,11 @@ $resultado = $car->Listar();
     <?php
     $quant = $car->Contar();
 
+    $delete = @$_GET['delete'];
+    if (isset($delete))
+    {
+        $car->Delete($delete);
+    }
 
     if ($car->Contar() > 0) 
     { 
@@ -69,8 +74,8 @@ $resultado = $car->Listar();
                             <td><?php echo $retorno->dt_inclusao; ?></td>
                             <td>
                                 <!-- inserir o ?menu=lista para se manter na mesma página após a exclusão  -->
-                                <a href='./administrativo.php?menu=listar&excluir=<?php echo $retorno->carro_id ?>'>
-                                    <i class="fas fa-trash-alt text-light" alt="Excluir"></i>
+                                <a href='./administrativo.php?menu=listar&delete=<?php echo $retorno->carro_id ?>'>
+                                    <i class="fas fa-trash-alt text-light" alt="Delete"></i>
                                 </a>
                             </td>
                         </tr>

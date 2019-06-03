@@ -1,4 +1,4 @@
-<?php 
+²<?php 
 
 /*
   `carro_id` int PRIMARY KEY AUTO_INCREMENT NOT NULL,
@@ -225,7 +225,7 @@
   //   return false;
   // }
 
-  public function Excluir($id)
+  public function Delete($id)
   {
     $sql = "DELETE FROM veiculos WHERE carro_id=".$id;
     $this->query($sql);
