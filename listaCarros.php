@@ -5,7 +5,8 @@ require_once "./Carro.php";
 $car = new Carro( DB_STRING, DB_USER, DB_PASS);
 
 // Listando todos os itens do banco na mesma página SEM PAGINAÇÃO
-$resultado = $car->Listar();
+
+    $resultado = $car->Listar();
 
 // testando se dentro da variável foi encontrado pelo menos 1 registro
 // ..se o método Listar() retornar 0 o isset() vai retornar FALSE

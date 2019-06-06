@@ -193,7 +193,6 @@
       return $this->query($sql);
     }
 
-
   //   public function Consultar($id)
   //   {
   //     $sql = "SELECT * FROM veiculos where carro_id=".$id;
@@ -225,23 +224,29 @@
   //   return false;
   // }
 
-  public function Delete($id)
-  {
-    $sql = "DELETE FROM veiculos WHERE carro_id=".$id;
-    $this->query($sql);
-  }
+    public function Delete($id)
+    {
+      $sql = "DELETE FROM veiculos WHERE carro_id=".$id;
+      $this->query($sql);
+    }
 
-  public function Contar()
-  {
-    $resp = $this->prepare("SELECT COUNT(*) AS total FROM veiculos");
-    $resp->execute();
-    $total = $resp->fetch(PDO::FETCH_OBJ);
-    return $total->total;
-  }
+    public function Contar()
+    {
+      $resp = $this->prepare("SELECT COUNT(*) AS total FROM veiculos");
+      $resp->execute();
+      $total = $resp->fetch(PDO::FETCH_OBJ);
+      return $total->total;
+    }
 
-  public function Listar()
-  {
+   public function Listar()
+   {
     $sql = "SELECT * FROM veiculos ORDER BY carro_id";
+    return $this->query($sql);
+  }
+
+  public function Buscar($texto)
+  {
+    $sql = "SELECT * FROM veiculos WHERE modelo LIKE '%".$texto."%' ORDER BY modelo";
     return $this->query($sql);
   }
 

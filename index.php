@@ -29,9 +29,9 @@
 						</li>
 					</ul>
 					<div id="top-search">
-						<form method="get" action="#">
-							<input type="text" name="s" class="input-search">
-							<input type="submit" value="Search" id="submit">
+						<form method="POST" action="./?buscar=true">
+							<input type="text" placeholder="Digite o modelo" name="campoBusca" class="input-search" required>
+							<input type="submit" value="Procurar" id="submit">
 						</form>
 					</div>
 					<div class="menu-main">
@@ -64,7 +64,7 @@
 		<div class="wrap">
 			<div class="main-box">
 				<div class="box_wrapper">
-					<h1>Featured Products</h1>
+					 <h1>Featured Products</h1>
 				</div>
 
 				<?php 

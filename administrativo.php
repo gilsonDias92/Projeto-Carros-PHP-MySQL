@@ -52,7 +52,7 @@
                     <a href="./administrativo.php?menu=listar">Exibir Todos</a>
                 </li>
                 <li>
-                    <a href="www.google.com.br">Sair</a>
+                    <a href="./">Sair</a>
                 </li>
             </ul>
             <div class="clear"></div>
@@ -78,16 +78,12 @@ switch ($menu) {
         require_once './listaCarros.php';
         break;
    default:
+        include './listaCarros.php';
+        //evitar que a pag carregue vazia
    break;
 }
 ?>
 
-
-<!--SECTIONS-->
-<div class="container">
-
-
-</div>  
 <!--FOOTER-->                  
 <footer class="page-footer font-small divFooter bg-dark mt-2">
   <div class="footer-copyright text-danger font-weight-bold text-center py-4">© 2019 Copyright:

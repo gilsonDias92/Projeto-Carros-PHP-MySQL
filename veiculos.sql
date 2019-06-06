@@ -69,8 +69,8 @@ INSERT INTO `veiculos` (`carro_id`, `marca`, `modelo`, `descricao`, `portas`, `a
 (43, 'ford', 'Ecosport 1.6 Flex', 'ar + dir', 2, 2013, 2014, 'preta', 122000, 'der-3025', '56000.00', 'Conservado', 1, './img/ecosport1.jpg', './img/ecosport2.jpg', './img/ecosport3.jpg', './img/ecosport4.jpg', '2019-06-02 19:30:31'),
 (44, 'fiat', 'strada 1.4 Flex', 'completo', 2, 2011, 2011, 'preta', 42000, 'der-6635', '23000.00', 'Conservado', 1, './img/strada1.jpg', './img/strada2.jpg', './img/strada3.jpg', './img/strada4.jpg', '2019-06-02 19:30:31'),
 (45, 'GM', 'Cruze 2.0 Flex', 'ar + dir', 2, 2012, 2013, 'prata', 42000, 'drd-2277', '63000.00', 'Conservado', 1, './img/cruze1.jpg', './img/cruze2.jpg', './img/cruze3.jpg', './img/cruze4.jpg', '2019-06-02 19:30:31'),
-(46, 'gm', 'opala', 'impecÃ¡vel', 2, 1975, 1975, 'vermelho', 120000, 'klf-9633', '94000.00', 'carro de colecionador', 0, './img/opala1.jpg', './img/opala1.jpg', './img/opala1.jpg', './img/opala1.jpg', '2019-06-03 10:29:56'),
-(54, 'ferrari', '458', 'Carro impecÃ¡vel', 2, 2010, 2010, 'Vermelha', 25000, 'wuy-9633', '99000.00', 'Sem dÃ©bitos', 0, './img/ferrari1.jpg', './img/ferrari2.jpg', './img/ferrari3.jpg', './img/ferrari4.jpg', '2019-06-03 19:18:37');
+(46, 'gm', 'opala', 'impecÃ¡vel', 2, 1975, 1975, 'vermelha', 120000, 'klf-9633', '94000.00', 'carro de colecionador', 0, './img/opala1.jpg', './img/opala1.jpg', './img/opala1.jpg', './img/opala1.jpg', '2019-06-03 10:29:56'),
+(54, 'ferrari', '458', 'Carro impecavel', 2, 2009, 2010, 'Vermelha', 25000, 'wuy-9633', '99000.00', 'Sem dÃ©bitos', 0, './img/ferrari1.jpg', './img/ferrari2.jpg', './img/ferrari3.jpg', './img/ferrari4.jpg', '2019-06-03 19:18:37');
 
 --
 -- Indexes for dumped tables
